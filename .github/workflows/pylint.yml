@@ -9,3 +9,9 @@ jobs:
     continue-on-error: true
     steps:
     - uses: action/checkout@v4
+  ruff_check:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - name: ruff check
+        uses: astral-sh/ruff-action@v1
